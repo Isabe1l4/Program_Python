@@ -1,0 +1,34 @@
+
+while True:
+    try:
+        #Atributos que vão ser usados para o cálculo
+        #Solicitar que o usuário insira sua primeira informação
+        peso_atual = float(input("Digite seu peso atual em quilogramas: "))
+        
+        #Solicitar que o usuário insira sua segunda informação
+        altura = float(input("Escreva sua altura atual em metros: "))
+        
+        #Definir parâmetros para a conclusão do IMC 
+        imc = peso_atual / (altura * altura)
+
+        #Para exibir o resultado do IMC
+        print("Seu IMC é de: {:.2f}". format(imc))
+
+        #Definir condições para a conclusão do IMC 
+        if imc < 18.5:
+            print("Você está abaixo do seu peso normal.")
+
+        elif 18.5 <= imc < 24.9:
+            print("Você está na sua faixa de peso normal.")
+
+        elif 25 <= imc < 29.9:
+            print("Você está com sobrepeso.")
+
+        else:
+            print("Você está com obesidade.")
+        
+        #Pra parar o programa após o cálculo
+        break
+
+    except ValueError:
+        print("Por favor, insira um número válido.")
